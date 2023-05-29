@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Crea la tua nuova pizza</h1>
+	<form method="POST">
+		<label>Nome</label>
+		<input type="text" name="name">
+		<br>
+		<label>Descrizione</label>
+		<input type="text" name="description">
+		<br>
+		<label>Link all'immagine</label>
+		<input type="text" name="imgUrl">
+		<br>
+		<label>Prezzo in centesimi</label>
+		<input type="number" name="priceInCents">
+		<br>
+		<input type="submit" value="CREATE">
+	</form>
+</body>
+</html>

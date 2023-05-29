@@ -7,6 +7,17 @@
 <body>
 	<h1>La tua pizzeria preferita!!</h1>
 	
+	<h2>Vuoi inserire una nuova pizza?</h2>
+	<a th:href="@{/pizzas/create}">Clicca qui</a>
+	
+	<h2>Puoi filtrare le nostre pizze per nome.</h2>
+	<h2>Inserisci il nome che vuoi cercare o lascia il campo vuoto per visualizzare la lista completa!</h2>
+	
+	<form th:action="@{/pizzas/search}" method="POST">
+		<input type="text" name="name" th:value="${name}">
+		<input type="submit" value="Cerca">
+	</form>
+	
 	<h3>Ecco la lista delle nostre pizze:</h3>
 	
 	<ul th:if="${pizzasRes.size() > 0}">

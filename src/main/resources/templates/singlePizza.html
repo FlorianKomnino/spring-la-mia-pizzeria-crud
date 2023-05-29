@@ -6,14 +6,18 @@
 </head>
 <body>
 	<h1>La pizza che hai scelto e': </h1>
-	<div>
+	<div
+		th:object="${singlePizza}"
+	>
 		<p>		
-			[[ ${singlePizza.name} ]]
+			[[ *{name} ]]
 		</p>
-		<img alt="foto della pizza" th:src="${singlePizza.imgUrl}">
+		<img width="300px" alt="foto della pizza" th:src="*{imgUrl}">
 		<p>
-			[[ ${singlePizza.priceInCents} ]]
+			[[ *{priceInFloat()} ]]
 		</p>
 	</div>
+	
+	<a th:href="@{/}">Torna alla pagina principale</a>
 </body>
 </html>
