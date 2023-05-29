@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>La pizza che hai scelto e': </h1>
+	<div>
+		<p>		
+			[[ ${singlePizza.name} ]]
+		</p>
+		<img alt="foto della pizza" th:src="${singlePizza.imgUrl}">
+		<p>
+			[[ ${singlePizza.priceInCents} ]]
+		</p>
+	</div>
+</body>
+</html>

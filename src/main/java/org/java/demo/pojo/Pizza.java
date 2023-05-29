@@ -62,7 +62,8 @@ public class Pizza {
 	@Override
 	public String toString() {
 		
-		return "Nome: " + name
+		return "\n[" + id + "]"
+				+ "\nNome: " + name
 				+ "\nDescrizione: " + getDescription()
 				+ "\nPrezzo: " + priceInFloat()
 				+ "\n-------------------------";
